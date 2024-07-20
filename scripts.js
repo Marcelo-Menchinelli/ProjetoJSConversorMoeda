@@ -41,9 +41,9 @@ function convertValue() {
         currency: "BRL"
     }).format(inputCurrencyValue)
 
-    currencyValueReal.innerHTML = new Intl.NumberFormat("pt-BR", {
+    currencyValueReal.innerHTML = new Intl.NumberFormat("es-ES", {
         style: "currency",
-        currency: "BRL"
+        currency: "MXN"
     }).format(inputCurrencyValue)
 
     if (currencySelect.value == "dolar") {
@@ -91,7 +91,7 @@ function changeCurrency() {
 
     if (currencySelect.value == "peso") {
         currencyMoneyReal.innerHTML = "Peso Mexicano"
-        currencyImg.src = "assets/bandeiraestados-unidos.png"
+        currencyImg.src = "assets/FlagMexico.jpg"
     }
 
     if (currencySelect.value == "dolar") {
@@ -116,11 +116,14 @@ currencySelect.addEventListener("change", changeCurrency)
 
 
 
+
+
+
 function changeCurrencySelect() {
 
     const currencyName = document.getElementById(".currency_name")
 
-    const flagBrasil = document.getElementById(".flag-brasil")
+    const flagBrasil = document.querySelector(".flag-brasil")
 
     const currencyImg = document.querySelector(".currency_img")
 
@@ -132,15 +135,13 @@ function changeCurrencySelect() {
 
     if (convertedSelect.value == "peso") {
         currencyMoneyReal.innerHTML = "Peso Mexicano"
-        flagBrasil.src = "assets/euro.png"
+        flagBrasil.src = "assets/FlagMexico.jpg"
     }
 
     if (convertedSelect.value == "real") {
         currencyMoneyReal.innerHTML = "Real Brasileiro"
-        flagBrasil.src = "assets/bandeiraestados-unidos.png"
+        flagBrasil.src = "assets/bandeirabrasil 2.png"
     }
-
-
     
     convertValue()
 
